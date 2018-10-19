@@ -8,4 +8,22 @@ function inventory() {
     }
 }
 
-window.addEventListener("load", inventory);
+window.addEventListener("load", startUp);
+
+function form() {
+    var button = document.querySelectorAll("button");
+    for (var i in button) {
+        let index = i;
+        button[i].addEventListener("click", function() {
+            var form = document.getElementById("form");
+            form.style.display = "block";
+            var bikeInfo = document.getElementById("bicycles");
+            bikeInfo.style.display = "none";
+        });
+    }
+}
+
+function startUp() {
+    inventory();
+    form();
+}

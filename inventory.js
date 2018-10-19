@@ -15,7 +15,7 @@ const INVENTORY = {
         {
             image: "specialized.jpg",
             name: "Specialized",
-            price: 3500,
+            price: 40,
             in_stock: 1
         },
         {

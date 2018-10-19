@@ -24,27 +24,28 @@
             <span class="navbar-toggler-icon"></span>
         </button>
     </nav>
-    <div id="bicycles"></div>
-    <script id="inventory" type="text/x-handlebars-template">
+    <div id="bicycles">
+        <script id="inventory" type="text/x-handlebars-template">
             <li class="d-flex list-group-item" style="margin-left: 2rem; margin-right: 2rem; margin-top: 2rem">
                     <img src="{{image}}">
                     <h4 style="margin-left: 4rem; margin-top: 10rem" >Name: {{name}}</h4>
                     <h4 style="margin-left: 4rem; margin-top: 10rem">Price: ${{ price }}</h4>
                     <h4 style="margin-left: 4rem; margin-top: 10rem">In-Stock: {{ in_stock }}</h4>
             </li>
-                <button href="#" class="btn btn-primary btn-lg active" style="margin-top: 2rem; margin-left: 2rem" role="button" aria-pressed="true">Rent</button>
+                <button id="button" href="#" class="btn btn-primary btn-lg active" style="margin-top: 2rem; margin-left: 2rem" role="button" aria-pressed="true">Rent</button>
     </script>
-    <div class="d-flex justify-content-center" style="margin-top: 3rem">
-        <h1>
-            Choose Your Bike:
-        </h1>
     </div>
     <div class="container">
         <ul id="bicycle" class="list-group justify-content-center" style="margin-top: 2rem">
         </ul>
     </div>
-    <div id="form" class="container">
-        <form>
+    <div class="container">
+        <form id="form">
+            <div class="d-flex justify-content-center" style="margin-top: 3rem">
+                <h1>
+                    Choose Your Bike:
+                </h1>
+            </div>
             <div class="row">
                 <div class="col">
                     <label for="inputFirstName">First Name:</label>
