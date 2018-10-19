@@ -13,65 +13,34 @@
     <title>Bicycle Rental</title>
 </head>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#" style="margin-left: 2rem"><img src="/home/basecamp/web_rental/sport.png" width="30"
-            height="30" class="d-inline-block align-top" alt="">Bicycle Rental</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-</nav>
+
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#" style="margin-left: 2rem"><img src="/home/basecamp/web_rental/sport.png" width="30"
+                height="30" class="d-inline-block align-top" alt="">Bicycle Rental</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+    <div id="bicycles"></div>
+    <script id="inventory" type="text/x-handlebars-template">
+            <li class="d-flex list-group-item" style="margin-left: 2rem; margin-right: 2rem; margin-top: 2rem">
+                    <img src="{{image}}">
+                    <h4 style="margin-left: 4rem; margin-top: 10rem" >Name: {{name}}</h4>
+                    <h4 style="margin-left: 4rem; margin-top: 10rem">Price: ${{ price }}</h4>
+                    <h4 style="margin-left: 4rem; margin-top: 10rem">In-Stock: {{ in_stock }}</h4>
+            </li>
+                <button href="#" class="btn btn-primary btn-lg active" style="margin-top: 1rem" role="button" aria-pressed="true">Rent</button>
+    </script>
     <div class="d-flex justify-content-center" style="margin-top: 3rem">
         <h1>
             Choose Your Bike:
         </h1>
     </div>
     <div class="container">
-        <ul class="list-group justify-content-center" style="margin-top: 2rem">
-            <li class="d-flex list-group-item" style="margin-left: 2rem; margin-right: 2rem">
-                <img src="yeti.jpg" height="250" width="250">
-                <h4 style="margin-left: 4rem; margin-top: 2rem">Price:
-                </h4>
-                <h4 style="margin-left: 4rem; margin-top: 2rem">In-Stock:</h4>
-            </li>
-            <button href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Rent</button>
-            <li class="d-flex list-group-item" style="margin-left: 2rem; margin-right: 2rem">
-                <img src="trek.jpg" height="250" width="250">
-                <h4 style="margin-left: 4rem; margin-top: 2rem">Price: </h4>
-                <h4 style="margin-left: 4rem; margin-top: 2rem">In-Stock:</h4>
-            </li>
-            <button href="#" class="btn btn-primary btn-lg active" style="margin-bottom: 2rem" role="button"
-                aria-pressed="true">Rent</button>
-            <li class="d-flex list-group-item" style="margin-left: 2rem; margin-right: 2rem">
-                <img src="specialized.jpg" height="250" width="250">
-                <h4 style="margin-left: 4rem; margin-top: 2rem">Price: </h4>
-                <h4 style="margin-left: 4rem; margin-top: 2rem">In-Stock:</h4>
-            </li>
-            <button href="#" class="btn btn-primary btn-lg active" style="margin-bottom: 2rem" role="button"
-                aria-pressed="true">Rent</button>
-            <li class="d-flex list-group-item" style="margin-left: 2rem; margin-right: 2rem">
-                <img src="santacruz.jpg" height="250" width="250">
-                <h4 style="margin-left: 4rem; margin-top: 2rem">Price: </h4>
-                <h4 style="margin-left: 4rem; margin-top: 2rem">In-Stock:</h4>
-            </li>
-            <button href="#" class="btn btn-primary btn-lg active" style="margin-bottom: 2rem" role="button"
-                aria-pressed="true">Rent</button>
-            <li class="d-flex list-group-item" style="margin-left: 2rem; margin-right: 2rem">
-                <img src="merida.jpg" height="250" width="250">
-                <h4 style="margin-left: 4rem; margin-top: 2rem">Price: </h4>
-                <h4 style="margin-left: 4rem; margin-top: 2rem">In-Stock:</h4>
-            </li>
-            <button href="#" class="btn btn-primary btn-lg active" style="margin-bottom: 2rem" role="button"
-                aria-pressed="true">Rent</button>
-            <li class="d-flex list-group-item" style="margin-left: 2rem; margin-right: 2rem">
-                <img src="gt.jpg" height="250" width="250">
-                <h4 style="margin-left: 4rem; margin-top: 2rem">Price: </h4>
-                <h4 style="margin-left: 4rem; margin-top: 2rem">In-Stock:</h4>
-            </li>
-            <button href="#" class="btn btn-primary btn-lg active" style="margin-bottom: 2rem" role="button"
-                aria-pressed="true">Rent</button>
+        <ul id="bicycle" class="list-group justify-content-center" style="margin-top: 2rem">
         </ul>
     </div>
     <div id="form" class="container">
@@ -134,7 +103,9 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script src="javaScript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js" defer></script>
+    <script src="inventory.js" defer></script>
+    <script src="javaScript.js" defer></script>
 
 </body>
 

@@ -1,37 +1,40 @@
 const INVENTORY = {
-    inventory: {
-        bikes: [
-            (Yeti: {
-                name: "Yeti",
-                coverImage: /home/basecamp/web_rental/yeti.jpg,
-                price: 6500,
-                In_Stock: 1
-            }),
-            (Trek: {
-                name: "Trek",
-                price: 3500,
-                In_Stock: 1
-            }),
-            (Specialized: {
-                name: "Specialized",
-                price: 3500,
-                In_Stock: 1
-            }),
-            (Santa_Cruz: {
-                name: "Santa Cruz",
-                price: 5500,
-                In_Stock: 1
-            }),
-            (Merida: {
-                name: "Merida",
-                price: 4500,
-                In_Stock: 1
-            }),
-            (GT: {
-                name: "GT",
-                price: 5500,
-                In_Stock: 1
-            })
-        ]
-    }
+    bikes: [
+        {
+            image: "/home/basecamp/web_rental/yeti.jpg",
+            name: "Yeti",
+            price: 65,
+            in_stock: 1
+        },
+        {
+            image: "/home/basecamp/web_rental/trek.jpg",
+            name: "Trek",
+            price: 40,
+            in_stock: 1
+        },
+        {
+            image: "/home/basecamp/web_rental/specialized.jpg",
+            name: "Specialized",
+            price: 3500,
+            in_stock: 1
+        },
+        {
+            image: "/home/basecamp/web_rental/santacruz.jpg",
+            name: "Santa Cruz",
+            price: 55,
+            in_stock: 1
+        },
+        {
+            image: "/home/basecamp/web_rental/merida.jpg",
+            name: "Merida",
+            price: 45,
+            in_stock: 1
+        },
+        {
+            image: "/home/basecamp/web_rental/gt.jpg",
+            name: "GT",
+            price: 55,
+            in_stock: 1
+        }
+    ]
 };
