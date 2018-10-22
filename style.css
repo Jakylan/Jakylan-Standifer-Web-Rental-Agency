@@ -2,6 +2,10 @@ form {
     display: none;
 }
 
+.thankYou {
+    display: none;
+}
+
 .show {
     display: block;
 }

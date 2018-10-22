@@ -23,7 +23,21 @@ function form() {
     }
 }
 
+function thankYou() {
+    var button = document.querySelectorAll("button");
+    for (var i in button) {
+        let index = i;
+        button[i].addEventListener("click", function() {
+            var form = document.getElementById("thankYou");
+            form.style.display = "block";
+            var bikeInfo = document.getElementById("form");
+            bikeInfo.style.display = "none";
+        });
+    }
+}
+
 function startUp() {
     inventory();
     form();
+    thankYou();
 }
